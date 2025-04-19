@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>新規単語追加</title>
+    <link rel="stylesheet" type="text/css" href="/inputform.css" />
+</head>
+<body>
+    <h1>新しい単語を追加</h1>
+    <form th:action="@{/save}" th:object="${word}" method="post">
+        <input type="hidden" th:field="*{id}" />
+        
+        <div class="form-row">
+            <label for="term">単語</label>
+            <input type="text" id="term" th:field="*{term}" />
+        </div>
+        
+        <div class="form-row">
+            <label for="formal_term">正規名称</label>
+            <input type="text" id="formal_term" th:field="*{formal_term}" />
+        </div>
+        
+        <div class="form-row">
+            <label for="category">カテゴリ</label>
+            <select id="category" th:field="*{category}">
+                <option value="" disabled selected>選択してください</option>
+                <option value="IT">IT</option>
+                <option value="ビジネス">ビジネス</option>
+                <option value="一般">一般</option>
+                <option value="英語">英語</option>
+                <!-- 追加したい場合はここに追加 -->
+            </select>
+        </div>
+        <div class="form-row">
+            <label for="meaning">意味</label>
+            <input type="text" id="meaning" th:field="*{meaning}" />
+        </div>
+        <div class="button-row">
+            <button type="submit" name="action" value="continue">続けて追加</button>
+            <button type="submit" name="action" value="submit">追加</button>
+            <a th:href="@{/}" class="button-link">取消</a>
+        </div>
+    </form>
+    
+</body>
+</html>

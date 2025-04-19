@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>単語帳アプリ</title>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+</head>
+<body>
+    <h1>単語一覧</h1>
+    
+    <div class="button-container">
+        <div class="left-button">
+            <a th:href="@{/new}" class="button-link">新規単語追加</a>
+        </div>
+        <div class="filter-container">
+            <form th:action="@{/words/filter}" method="get" style="display: flex; align-items: center; gap: 10px;">
+                <label for="categorySelect" style="font-size: small;">カテゴリで絞り込み</label>
+                <select name="category" id="categorySelect" class="filter-select">
+                    <option value="all" th:selected="${selectedCategory == 'all'}">すべて</option>
+                    <option value="IT" th:selected="${selectedCategory == 'IT'}">IT</option>
+                    <option value="ビジネス" th:selected="${selectedCategory == 'ビジネス'}">ビジネス</option>
+                    <option value="一般" th:selected="${selectedCategory == '一般'}">一般</option>
+                    <option value="英語" th:selected="${selectedCategory == '英語'}">英語</option>
+                </select>
+                <button type="submit" class="filter-button">絞り込み</button>
+            </form>
+        </div>
+    </div>
+    
+    <table border="1" style="table-layout: fixed; width: 95%;">
+        <tr>
+            <th>単語</th>
+            <th>正式名称</th>
+            <th>カテゴリ</th>
+            <th>意味</th>
+            <th>操作</th>
+        </tr>
+        <tr th:each="word : ${listWords}">
+            <td th:text="${word.term}">Term</td>
+            <td th:text="${word.formal_term}">formalTerm</td>
+            <td th:text="${word.category}">category</td>
+            <td th:text="${word.meaning}">Meaning</td>
+            <td>
+                <a th:href="@{'/edit/' + ${word.id}}" class="button-link" >編集</a>
+                <a th:href="@{'/delete/' + ${word.id}}" class="button-link">削除</a>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
