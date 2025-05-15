@@ -1,0 +1,112 @@
+body {
+    background-color: #e9f9ee;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2e7d32;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+h1 {
+    margin-top: 30px;
+    font-size: 24px;
+    text-align: center;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #2e7d32;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.button-row {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+button,
+.button-link {
+    padding: 10px 18px;
+    font-size: 14px;
+    background-color: #07b40d; 
+    color: white;
+    border: none;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    box-sizing: border-box;
+    display: inline-block;    
+    text-align: center; 
+}
+
+button:hover,
+.button-link:hover {
+    background-color: #45a049;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+}
+
+/* ▼ スマホ向け調整（最大幅600px以下） */
+@media (max-width: 600px) {
+    form {
+        padding: 20px;
+    }
+
+    .button-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    button,
+    .button-link {
+        width: 100%;
+        font-size: 16px;
+        display: inline-block;    
+        text-align: center; 
+    }
+
+    input[type="text"],
+    select {
+        font-size: 16px;
+    }
+}

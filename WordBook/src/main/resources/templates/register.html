@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>アカウント登録</title>
+    <link rel="stylesheet" type="text/css" href="/inputform.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <h1>新しいアカウントを登録</h1>
+    <form th:action="@{/insertUser}" th:object="${user}" method="post">
+        <input type="hidden" th:field="*{id}" />
+        
+    <!-- エラーが発生した場合に表示-->
+    <p th:if="${error}" class="error-message" th:text="${error}">ユーザー名が重複しています</p>
+        <div class="form-row">
+            <label for="name">ユーザー名</label>
+            <input type="text" id="name" th:field="*{name}" />
+        </div>
+        
+        <div class="form-row">
+            <label for="password">パスワード</label>
+            <input type="text" id="password" th:field="*{password}" />
+        </div>
+        
+        <div class="form-row">
+            <label for="book">ブック名</label>
+            <input type="text" id="book" th:field="*{book}" />
+        </div>
+        <div class="button-row">
+            <button type="submit" name="action" value="submit">追加</button>
+            <a th:href="@{/wordBook}" class="button-link">取消</a>
+        </div>
+    </form>
+    
+</body>
+</html>
