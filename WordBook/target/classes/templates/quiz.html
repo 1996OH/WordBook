@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>単語クイズ</title>
+    <link rel="stylesheet" th:href="@{/quiz.css}">
+    <script th:src="@{/quiz.js}"></script>
+</head>
+
+<body>
+    <div class="word" th:text="${questionWord}">Sample Word</div>
+
+    <!-- エラーメッセージを表示するためのdiv -->
+    <div id="message" class="result"></div>
+    <div id="resultText" class="result"></div>
+    
+    <!-- 単語テストdiv -->
+    <div class="options">
+        <form id="quizForm">
+            <input type="hidden" id="correctAnswer" th:value="${correctAnswer}" />
+            <div th:each="option : ${options}">
+                <button type="button" class="option-button" th:text="${option}"></button>
+            </div>
+        </form>
+    </div>
+    
+    <!-- 続行か確認用 -->
+    <div id="continue-box" style="display:none;">
+        <button type="button" onclick="window.location.reload()">続行</button>
+        <button type="button" onclick="window.location.href='/wordBook'">トップに戻る</button>
+    </div>
+</body>
+
+</html>
