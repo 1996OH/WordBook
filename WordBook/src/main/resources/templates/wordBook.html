@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <title>単語帳アプリ</title>
     <link rel="stylesheet" type="text/css" href="/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
     <h1>単語一覧</h1>
-    
+
     <div class="button-container">
-        <div class="left-button">
+        <div class="button-group"> 
             <a th:href="@{/new}" class="button-link">新規単語追加</a>
             <a th:href="@{/quiz}" class="button-link">単語テスト</a>
             <a th:href="@{/register}" class="button-link">アカウント登録</a>
             <a th:href="@{/logout}" class="button-link">ログアウト</a>
         </div>
-        <div class="filter-container">
+        <div class="filter-group">
             <form th:action="@{/words/filter}" method="get" style="display: flex; align-items: center; gap: 10px;">
                 <label for="categorySelect" style="font-size: small;">カテゴリで絞り込み</label>
                 <select name="category" id="categorySelect" class="filter-select">
@@ -60,4 +62,5 @@
         </table>
     </div>
 </body>
+
 </html>
