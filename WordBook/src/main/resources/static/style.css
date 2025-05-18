@@ -1,6 +1,6 @@
 body {
     min-width: 100%;
-    overflow-x: hidden;
+    overflow-x: auto; /* 横スクロール可能に変更 */
     background-color: #e9f9ee;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #2e7d32;
@@ -8,7 +8,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    height: 100vh;
     margin: 0;
     text-align: left;
     padding: 10px;
@@ -36,26 +35,7 @@ h1 {
     white-space: nowrap;
 }
 
-.filter-button {
-    padding: 5px 10px;
-    font-size: 14px;
-    background-color: #07b40d;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    white-space: nowrap;
-    min-width: 80px;
-}
-
-.filter-select {
-    padding: 5px;
-    font-size: 14px;
-    flex: 1 1 120px;
-}
-
-.button-link:hover,
-.filter-button:hover {
+.button-link:hover{
     background-color: #45a049;
 }
 
@@ -68,14 +48,13 @@ h1 {
     width: 100%;
     overflow-x: auto;
     box-sizing: border-box;
-    padding: 0 12px;
+    padding: 0 14px;
 }
 
 table {
     width: 100%;
-    table-layout: fixed;
     border-collapse: collapse;
-    min-width: 600px;
+    min-width: 1200px;
 }
 
 table, th, td {
@@ -91,43 +70,69 @@ th, td {
     border-collapse: collapse;
 }
 
-th:nth-child(1), td:nth-child(1) { min-width: 100px; }
-th:nth-child(2), td:nth-child(2) { min-width: 15%; }
-th:nth-child(3), td:nth-child(3) { min-width: 80px; }
-th:nth-child(4), td:nth-child(4) { min-width: 100px; }
-th:nth-child(5), td:nth-child(5) { min-width: 100px; }
+/* 列幅調整：意味は広く、カテゴリは狭く */
+th:nth-child(1), td:nth-child(1) { min-width: 100px; }     /* 単語 */
+th:nth-child(2), td:nth-child(2) { min-width: 150px; }     /* 正式名称 */
+th:nth-child(3), td:nth-child(3) { min-width: 100px; }     /* カテゴリ（狭め） */
+th:nth-child(4), td:nth-child(4) { min-width: 500px; }     /* 意味（広め） */
+th:nth-child(5), td:nth-child(5) { min-width: 125px; }     /* 操作（ボタンに合わせる） */
 
 .button-container {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between; /* 左右に分ける */
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
     width: 100%;
-    max-width: 100%;
+    gap: 20px;
     padding: 0 12px;
     box-sizing: border-box;
-    gap: 10px;
 }
 
-.left-button,
-.filter-container {
+.button-group {
     display: flex;
-    flex-wrap: wrap;
     gap: 10px;
+    flex-shrink: 0;
+    white-space: nowrap;
 }
 
-@media (min-width: 600px) {
-    .button-container {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 100%;
-        min-width: 600px;
-    }
+.filter-group {
+    display: flex;
+    justify-content: flex-end;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
 
-    .left-button {
-        justify-content: flex-start;
-    }
+.filter-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+}
 
-    .filter-container {
-        justify-content: flex-end;
-    }
+.filter-form label {
+    font-size: small;
+    min-width: 100px;
+}
+
+.filter-select {
+    min-width: 120px;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.filter-button {
+    min-width: 80px;
+    font-size: 14px;
+    padding: 5px 10px;
+    background-color: #07b40d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.filter-button:hover {
+    background-color: #45a049;
 }
