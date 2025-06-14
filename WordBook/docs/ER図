@@ -1,0 +1,17 @@
+erDiagram
+    USERS {
+        BIGINT id PK
+        VARCHAR username
+        VARCHAR password
+        VARCHAR book
+    }
+
+    WORDS {
+        BIGINT id PK
+        VARCHAR question
+        VARCHAR answer
+        VARCHAR book
+        BIGINT user_id FK
+    }
+
+    USERS ||--o{ WORDS : has
