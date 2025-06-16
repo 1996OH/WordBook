@@ -45,7 +45,7 @@ Webアプリを公開する流れを経験すること
 - **フレームワーク**：Spring Boot、Thymeleaf、Spring Security
 - **開発環境**：Mac、Visual Studio Code、EC2
 - **公開環境**：Amazon Linux
-- **URL**：[https://www.wordbookapp.hiroyuki-o.jp:8080](http://www.wordbookapp.hiroyuki-o.jp:8080)
+- **URL**：[https://www.wordbookapp.hiroyuki-o.jp](https://www.wordbookapp.hiroyuki-o.jp)
 - **動作確認用アカウント**：
   - ユーザー名：`test`
   - パスワード：`test`
