@@ -61,7 +61,7 @@ Webアプリを公開する流れを経験すること
    
 ## 📘 詳細設計書
 
-🔗 [アクティビティ図](https://github.com/1996OH/WordBook/tree/main/WordBook/docs/%E3%82%A2%E3%82%AF%E3%83%86%E3%82%A3%E3%83%93%E3%83%86%E3%82%A3%E5%9B%B3)  
+🔗 [シーケンス図](https://github.com/1996OH/WordBook/tree/main/WordBook/docs/%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B9%E5%9B%B3)  
 🔗 [ER図](https://github.com/1996OH/WordBook/blob/main/WordBook/docs/ER%E5%9B%B3.md)  
 🔗 [クラス図](https://github.com/1996OH/WordBook/blob/main/WordBook/docs/%E3%82%AF%E3%83%A9%E3%82%B9%E5%9B%B3.md)  
 🔗 [画面遷移図](https://github.com/1996OH/WordBook/blob/main/WordBook/docs/%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3.md)  
