@@ -3,6 +3,10 @@
 ## 📄 概要
 
 複数分野の単語を効率よく管理・確認するためのシンプルな構成のアプリケーション
+- **URL**：[https://www.wordbookapp.hiroyuki-o.jp](https://www.wordbookapp.hiroyuki-o.jp)
+- **動作確認用アカウント**：
+  - ユーザー名：`test`
+  - パスワード：`test`
 
 ## ⭐️ 作成目的
 
@@ -37,18 +41,29 @@ Webアプリを公開する流れを経験すること
  アカウント登録で任意のアカウント名で作成できる。
  (ユーザー名は重複して登録できない)
 
-## ⚙️ 技術スタック
+## 💻 技術スタック
 
-- **フロントエンド**：HTML、CSS、JavaScript
-- **バックエンド**：Java
-- **データベース**：PostgreSQL
-- **フレームワーク**：Spring Boot、Thymeleaf、Spring Security
-- **開発環境**：Mac、Visual Studio Code、EC2
-- **公開環境**：Amazon Linux
-- **URL**：[https://www.wordbookapp.hiroyuki-o.jp](https://www.wordbookapp.hiroyuki-o.jp)
-- **動作確認用アカウント**：
-  - ユーザー名：`test`
-  - パスワード：`test`
+- **フロントエンド**  
+  - HTML, CSS, JavaScript  
+  - テンプレートエンジン：Thymeleaf  
+
+- **バックエンド**  
+  - Java（Spring Boot / Spring Security）  
+
+- **データベース**  
+  - PostgreSQL  
+
+- **インフラ・公開環境**  
+  - AWS EC2（Amazon Linux）  
+  - 独自ドメイン（お名前.com）  
+  - HTTPS対応（Let's Encrypt + DNS設定）  
+
+- **開発環境**  
+  - macOS  
+  - Visual Studio Code  
+
+- **使用ライブラリ・ツール**  
+  - Lombok  
 
 ## 🖥️ 画面構成
 
