@@ -1,12 +1,14 @@
 // ファイル：CustomUserDetails.java
 
-package com.example.WordBook.model;
+package com.example.WordBook.service;
 
 import java.util.Collection;
 import java.util.Collections;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+
+import com.example.WordBook.model.User;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
