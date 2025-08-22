@@ -3,7 +3,7 @@
 ## 📄 概要
 
 複数分野の単語を効率よく管理・確認するためのシンプルな構成のアプリケーション
-- **URL**：[https://www.wordbookapp.hiroyuki-o.jp](https://www.wordbookapp)
+- **URL**：[https://www.wordbookapp.hiroyuki-o.jp](https://www.wordbookapp.hiroyuki-o.jp)
 - **動作確認用アカウント**：
   - ユーザー名：`test`
   - パスワード：`test`
